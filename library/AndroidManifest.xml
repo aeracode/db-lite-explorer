@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aerabox.android.dbexplorer"
+    android:versionCode="1"
+    android:versionName="0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application>
+        <activity android:name=".TableInfoListActivity" />
+        <activity
+            android:name=".TableInfoDetailActivity"
+            android:parentActivityName=".TableInfoListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aerabox.android.dbexplorer.TableInfoListActivity" />
+        </activity>
+    </application>
+
+</manifest>

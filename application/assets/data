@@ -1,0 +1,73 @@
+DROP TABLE IF EXISTS "graph_io";
+CREATE TABLE graph_io (
+    in_id     INTEGER,
+    out_id    INTEGER
+);
+INSERT INTO "graph_io" VALUES(1,7);
+INSERT INTO "graph_io" VALUES(1,9);
+INSERT INTO "graph_io" VALUES(1,11);
+INSERT INTO "graph_io" VALUES(2,8);
+INSERT INTO "graph_io" VALUES(2,10);
+INSERT INTO "graph_io" VALUES(2,12);
+INSERT INTO "graph_io" VALUES(3,7);
+DROP TABLE IF EXISTS "graph_node";
+CREATE TABLE graph_node (
+    id        INTEGER PRIMARY KEY,
+    type      INTEGER NOT NULL,
+    entity_id INTEGER NOT NULL
+);
+INSERT INTO "graph_node" VALUES(1,1,1);
+INSERT INTO "graph_node" VALUES(2,1,2);
+INSERT INTO "graph_node" VALUES(3,1,3);
+INSERT INTO "graph_node" VALUES(4,1,4);
+INSERT INTO "graph_node" VALUES(5,1,5);
+INSERT INTO "graph_node" VALUES(6,1,6);
+INSERT INTO "graph_node" VALUES(7,2,1);
+INSERT INTO "graph_node" VALUES(8,2,2);
+INSERT INTO "graph_node" VALUES(9,2,3);
+INSERT INTO "graph_node" VALUES(10,2,4);
+INSERT INTO "graph_node" VALUES(11,2,5);
+INSERT INTO "graph_node" VALUES(12,2,6);
+DROP TABLE IF EXISTS "graph_pc";
+CREATE TABLE graph_pc (
+    parent_id INTEGER,
+    child_id  INTEGER
+);
+DROP TABLE IF EXISTS "graph_prrrc";
+CREATE TABLE graph_prrrc (
+    column_01 INTEGER,
+ column_02 INTEGER,
+ column_03 INTEGER,
+ column_04 INTEGER,
+ column_05 INTEGER,
+ column_06 INTEGER,
+ column_07 INTEGER,
+ column_08 INTEGER,
+ column_09 INTEGER,
+ column_10 INTEGER,
+ column_11 INTEGER
+
+);
+DROP TABLE IF EXISTS "label";
+CREATE TABLE label (
+    id INTEGER PRIMARY KEY,
+    name TEXT UNIQUE
+);
+INSERT INTO "label" VALUES(1,'asd');
+INSERT INTO "label" VALUES(2,'label 001');
+INSERT INTO "label" VALUES(3,'book');
+INSERT INTO "label" VALUES(4,'urgent tasks');
+INSERT INTO "label" VALUES(5,'entertaiment');
+INSERT INTO "label" VALUES(6,'job');
+DROP TABLE IF EXISTS "todo";
+CREATE TABLE todo (
+    id INTEGER PRIMARY KEY,
+    task TEXT,
+    state INTEGER
+);
+INSERT INTO "todo" VALUES(1,'task 1',0);
+INSERT INTO "todo" VALUES(2,'task 2',0);
+INSERT INTO "todo" VALUES(3,'task 3',0);
+INSERT INTO "todo" VALUES(4,'task 4',0);
+INSERT INTO "todo" VALUES(5,'task 5',0);
+INSERT INTO "todo" VALUES(6,'task 6',0);
